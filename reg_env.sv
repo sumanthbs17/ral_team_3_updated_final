@@ -32,7 +32,7 @@ class reg_env extends uvm_env;
       super.connect_phase (phase);
       m_apb2reg_predictor.map       = m_ral_model.default_map;
       m_apb2reg_predictor.adapter   = m_reg2apb;
-     m_ral_model.default_map.set_sequencer( .my_sequencer( m_agent.m_seqr), .ral_adapter(m_reg2apb) );
+     m_ral_model.default_map.set_sequencer( .sequencer( m_agent.m_seqr), .adapter(m_reg2apb) );
      m_ral_model.default_map.set_base_addr('h0);
    endfunction
 endclass
